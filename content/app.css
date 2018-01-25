@@ -28,3 +28,8 @@ img {
     height: 100%;
     width: 100%;
 }
+
+label{
+    padding: 0 10px;
+    width: 100px;
+}
