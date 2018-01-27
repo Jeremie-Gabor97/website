@@ -47,7 +47,7 @@
                         </div>
 
                         <div class="row">
-                            <article ng-repeat="article in Articles">
+                            <article ng-repeat="article in Articles | limitTo:quantity">
                                 <h2>{{ article.Title }}</h2>
                                 <div class="col-sm-3">
                                     <img ng-src="{{ article.Image }}" />
@@ -68,6 +68,14 @@
                                 <li><a href = "https://www.google.com/search?q=horseback">Horseback</a></li>
                                 <li><a href = "https://www.google.com/search?q=backpacking">Backpacking</a></li>
                             </ul>
+                            <div class = "space">
+                                <center>
+                                    <p>How many cool things do you wanna see?</p>
+                                    <input ng-model="place_holder" type="numeric">
+                                    <button ng-click="coolThings()">Submit</button>
+                                    <p>{{ warning }}</p>
+                                </center>
+                            </div>
                         </aside>
             
                     <aside class = "col-sm-3">
