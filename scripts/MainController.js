@@ -16,7 +16,7 @@ app.controller('MainController',['$scope',function($scope, $http) {
 
     $scope.place_holder = 0;
     $scope.quantity = 0;
-    $scope.warning = "yftrf";
+    $scope.warning = "";
     $scope.coolThings=function(){
         $scope.quantity = $scope.place_holder;
         if(isNaN($scope.quantity)){
